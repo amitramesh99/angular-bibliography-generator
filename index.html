@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        <script src="main.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+        <link href="normalize.css" rel="stylesheet">
+        <link href="stylesheet.css" rel="stylesheet">
+    </head>
+    <body ng-app="main" ng-controller="AppCtrl">
+        <div id="homeWrapper">
+            <h1>Bibliography Generator</h1>
+            <form id="searchContainer" class="center">
+                <input id="userInput" type="text" placeholder="Wiki URL here" ng-model="userInput" autofocus><button id="submit" ng-click="getBib()" type="submit">Create</button>
+                <div>
+                    <label ng-click="includeUrl=!includeUrl">Include URL</label>
+                    <input type="checkbox" ng-model="includeUrl">
+                </div>
+            </form>
+        </div>
+            <div ng-repeat="search in searches" class="card" ng-class="search.status">
+                <h3><a href="{{userInput}}" target="_blank">{{search.title}}</a><span ng-click="remove($index)" class="close">X</span></h3>
+                <input class="result" type="text" onClick="this.select()" value={{search.bibliography}} ng-hide="search.bibliography==''">
+            </div>
+    </body>
+</html>

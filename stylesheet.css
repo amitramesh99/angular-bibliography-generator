@@ -1,0 +1,101 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 48px;
+    margin: 0px;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0px;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.center{
+    margin: auto;
+}
+
+#homeWrapper{
+    padding: 100px;
+    text-align: center;
+    background-color: white;
+    /*background-image: url(hero.jpg);*/
+}
+
+#searchContainer{
+    margin-top: 80px;
+}
+
+#userInput{
+    padding: 15px;
+    border: none;
+    width: 550px;
+    border: 1px solid #e3e3e3;
+}
+
+#userInput:focus{
+    border: 1px solid #444;
+    outline: 0px;
+}
+
+#submit{
+    padding: 15px;
+    min-width: 150px;
+    border: 1px solid #C62828;
+    background-color: #C62828;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#submit:hover{
+    border: 1px solid #B71C1C;
+    background-color: #B71C1C;
+}
+
+.card{
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    width: 700px;
+}
+
+.result{
+    width: 660px;
+    resize: none;
+    padding: 20px;
+    margin-top:20px;
+    overflow: scroll;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.pending{
+    border-left: 4px solid #C62828;
+}
+
+.success{
+    border-left: 4px solid #009688;
+}
+
+.failed{
+    border-left: 4px solid grey;
+}
+
+.close{
+    display:inline-block;
+    float: right;
+    color: #C62828;
+    cursor: pointer;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
